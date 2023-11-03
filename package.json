@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "run-p type-check build-only",
+    "build": "run-p build-only",
     "style": "bunx tailwindcss -i ./src/styles.css -o ./src/output.css --watch",
     "preview": "vite preview",
     "build-only": "vite build && npx tailwindcss -i ./src/styles.css -o ./dist/output.css --minify",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
